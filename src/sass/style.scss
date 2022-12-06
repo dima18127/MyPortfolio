@@ -17,6 +17,17 @@
 body {
     height: 5000px;
 }
+.divider {
+    height: 3px;
+    width: 60px;
+    background-color: $main-color;
+    margin: 25px auto;
+}
 
 @import "blocks/Promo";
 @import "blocks/title";
+@import "blocks/sidepanel";
+@import "blocks/hamburger";
+@import "blocks/menu";
+@import "blocks/about";
+@import "blocks/resume";

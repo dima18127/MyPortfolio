@@ -1,0 +1,29 @@
+.resume {
+    padding-top: 120px;
+
+    justify-content: center;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &::before {
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+}
+.container {
+}
+.title {
+    &_fz16 {
+    }
+
+    &_fz36 {
+    }
+}
+.divider {
+}
