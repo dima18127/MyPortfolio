@@ -8,3 +8,11 @@ hamburger.addEventListener('click', () => {
 closer.addEventListener("click", () => {
     menu.classList.remove("active")
 })
+// ____________________ счетчик процентов/ метрика скиллов ____________________
+let scoreSkill = document.querySelectorAll(".skills__metric_procent"),
+    lines = document.querySelectorAll(".skills__metric-line span")
+// let procent = scoreSkill.innerText
+scoreSkill.forEach((item,i)=>{
+    lines[i].style.width = item.innerHTML
+})
+

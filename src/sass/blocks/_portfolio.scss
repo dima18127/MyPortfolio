@@ -1,0 +1,39 @@
+.portfolio {
+    margin-top: 100px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 280px;
+        // grid-template-rows: minmax(280px, auto);
+        gap: 5px 5px;
+    }
+    &__item:nth-child(4) {
+        grid-column-start: 4;
+        grid-row: 1/3;
+    }
+    &__item:nth-child(6) {
+        grid-column: 2/4;
+        img {
+            width: 100%;
+            height: 280px;
+        }
+    }
+}
+.container {
+}
+.title {
+    &_fz16 {
+    }
+
+    &_fz36 {
+    }
+}
+.resume {
+    &__title {
+    }
+
+    &__subtitle {
+    }
+}
+.divider {
+}
