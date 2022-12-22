@@ -7,6 +7,7 @@
         grid-auto-rows: minmax(245px, auto);
         column-gap: 70px;
         row-gap: 40px;
+        transform: rotate(0%);
     }
 
     &__photo {
@@ -14,9 +15,7 @@
         img {
             width: 100%;
         }
-        // display: block;
-        // width: 100px;
-        // height: 100px;
+
     }
 
     &__descr {
@@ -36,23 +35,15 @@
         padding-left: 12px;
         @include before_circle;
     }
-
-    &__subtitle {
-    }
-
     &__skills {
         display: grid;
-        // grid-template-columns: 260px 260px;
         grid-template: repeat(2, minmax(116px, auto)) / repeat(2, 1fr);
-        // grid-template-rows: minmax(116px, auto);
         column-gap: 50px;
         row-gap: 20px;
-        // grid-template-rows: ;
         &-item {
             display: grid;
             grid-template-columns: 40px 1fr;
             column-gap: 20px;
-            // display: flex;
             img {
                 margin-right: 20px;
             }
@@ -79,7 +70,4 @@
         font-size: 12px;
         line-height: 18px;
     }
-}
-
-.divider {
 }

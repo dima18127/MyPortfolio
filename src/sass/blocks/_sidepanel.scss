@@ -4,20 +4,17 @@
     justify-content: space-between;
     align-items: center;
     height: 408px;
-    position: absolute;
+    position: fixed;
     top: 250px;
     left: 50px;
     z-index: 2;
     color: rgb(255, 255, 255);
     &__link {
-
-        color: rgb(255, 255, 255);
-        // filter:invert(100%);
+    color: rgb(255, 255, 255);
 
     }
 
     &__divider {
-
         margin-left: 9px;
         height: 70px;
         width: 2px;

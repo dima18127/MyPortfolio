@@ -1,18 +1,21 @@
 .skills {
+    margin-top: 60px;
     &__wraper {
+        margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 13px;
         row-gap: 13px;
-        // gap: 13px;
     }
 
     &__cart {
         display: block;
         padding: 30px 30px 30px 20px;
-        // width: 270px;
-        // height: 270px;
         border: 2px solid #000;
+        &:hover {
+            transform: scale(1.05);
+            transition: all 0.6s;
+        }
     }
 
     &__text {
@@ -29,7 +32,6 @@
             margin-top: 20px;
         }
     }
-
     &__metric {
         margin-top: 120px;
         display: grid;
@@ -40,22 +42,23 @@
         }
     }
     &__metric-item {
-        // margin-left: 45px;
-        // width: 350px;
-        // height: 70px;
+        transition: all 0.6s;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
     &__metric-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        h4 {
-            padding-left: 13px;
-            position: relative;
-            @include before_circle;
-            &:before {
-                left: 0px;
-            }
-        }
+        // h4 {
+        //     padding-left: 13px;
+        //     position: relative;
+        //     @include before_circle;
+        //     &:before {
+        //         left: 0px;
+        //     }
+        // }
     }
     &__metric-line {
         margin-top: 27px;
@@ -64,16 +67,7 @@
         background-color: #e8e4de;
         position: relative;
         border-radius: 50px;
-        // &::before :nth-child(1) {
-        //     content: "";
-        //     display: block;
-        //     width: 320px;
-        //     height: 14px;
-        //     background-color: $main-color;
-        //     position: absolute;
-        //     left: 0;
-        //     right: 0;
-        // }
+
         span {
             display: block;
             height: 14px;

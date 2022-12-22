@@ -1,27 +1,12 @@
 .resume {
     padding-top: 120px;
     justify-content: center;
-    &__title {
-        position: relative;
-        text-align: center;
-        @include before_circle;
-        &::before {
-            top: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    &__subtitle {
-        text-align: center;
-    }
-
     &__wrapper {
         padding: 65px 65px 0 65px;
         display: grid;
         grid-template-columns: repeat(2, 425px);
         column-gap: 169px;
     }
-
     &__column {
         h3 {
             margin-bottom: 0px;
@@ -44,7 +29,6 @@
         }
         ul {
             list-style-type: none;
-            // padding-left: 43px;
             li {
                 position: relative;
                 &:after {
