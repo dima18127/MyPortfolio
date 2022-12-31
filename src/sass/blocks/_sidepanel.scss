@@ -10,8 +10,7 @@
     z-index: 2;
     color: rgb(255, 255, 255);
     &__link {
-    color: rgb(255, 255, 255);
-
+        color: rgb(255, 255, 255);
     }
 
     &__divider {
@@ -35,4 +34,8 @@
             transform: rotate(-90deg) translate(-30%, -260%);
         }
     }
+    // img {
+    //     width: 25px;
+    //     height: 25px;
+    // }
 }

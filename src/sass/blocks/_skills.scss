@@ -1,5 +1,6 @@
 .skills {
     margin-top: 60px;
+    padding: 0px 30px 0px 30px;
     &__wraper {
         margin-top: 60px;
         display: grid;
@@ -38,8 +39,6 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 45px;
         row-gap: 30px;
-        &_procent {
-        }
     }
     &__metric-item {
         transition: all 0.6s;
@@ -51,14 +50,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // h4 {
-        //     padding-left: 13px;
-        //     position: relative;
-        //     @include before_circle;
-        //     &:before {
-        //         left: 0px;
-        //     }
-        // }
     }
     &__metric-line {
         margin-top: 27px;

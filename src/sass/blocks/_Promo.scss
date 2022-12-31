@@ -1,14 +1,13 @@
 .promo {
     min-height: 100vh;
-    position: relative;
-    //50%/cover первое знач. - ширина, второе высота cover - покрывает все.
     background: url(img/main_bg3.jpg) 50% / cover no-repeat;
+    padding-bottom: 10px;
     &__tittle-wrap {
+        position: relative;
         display: block;
         padding-top: 344px;
-        margin-left: 620px;
-        width: 532px;
-        position: relative;
+        margin-left: 50%;
+        max-width: 532px;
         z-index: 0;
     }
     &__tittle {
