@@ -4,9 +4,10 @@
     &__wraper {
         margin-top: 60px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, 275px);
         column-gap: 13px;
         row-gap: 13px;
+        justify-content: space-between;
     }
 
     &__cart {
@@ -36,7 +37,7 @@
     &__metric {
         margin-top: 120px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, 275px);
         column-gap: 45px;
         row-gap: 30px;
     }

@@ -2,9 +2,13 @@
     margin-top: 60px;
 
     &__wrapper {
+        margin-top: 20px;
         padding: 0 48px;
         display: grid;
-        grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 365px);
+        grid-template: repeat(auto-fit, minmax(45px, auto)) / repeat(
+                auto-fit,
+                365px
+            );
         justify-content: space-between;
         row-gap: 15px;
         &-item {
