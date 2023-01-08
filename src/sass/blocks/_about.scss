@@ -65,6 +65,7 @@
                 line-height: 21px;
             }
         }
+
     }
 
     &__skills-img {
@@ -78,6 +79,7 @@
     }
 
     &__skills-text {
+        display: block;
         margin-top: 6px;
         font-size: 12px;
         line-height: 18px;

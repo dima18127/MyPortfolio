@@ -16,6 +16,29 @@ scoreSkill.forEach((item,i)=>{
     lines[i].style.width = item.innerHTML
 })
 
+// _________ плавный скролл чистый js
+window.scrollTo( 0, 1000 );
+
+// этот код меняет поведение прокрутки на "smooth"
+function scrollTo(element) {
+    window.scroll({
+      left: 0, 
+      top: element.offsetTop, 
+      behavior: 'smooth'
+    })
+  }
+  
+  var button = document.querySelector('.button');
+  var footer = document.querySelector('#footer');
+  
+  button.addEventListener('click', () => {
+    scrollTo(footer);
+  })
+
+
+
+
+
 
 // ________________________ scroll intersection api
 // function onEntry(entry) {

@@ -9,6 +9,23 @@
     left: 50px;
     z-index: 2;
     color: rgb(255, 255, 255);
+    padding: 2px;
+    @keyframes fill-change {
+        0% {
+            fill: blue;
+        }
+        50% {
+            fill: orange;
+        }
+        100% {
+            fill: blue;
+        }
+    }
+
+    rect {
+        animation: 2s ease fill-change infinite;
+        fill: blue;
+    }
     &__link {
         color: rgb(255, 255, 255);
     }
