@@ -3,7 +3,6 @@
     top: 20px;
     right: 30px;
     z-index: 11;
-    // padding: 5px;
     height: 21px;
     width: 36px;
     display: flex;
@@ -11,37 +10,17 @@
     align-items: flex-end;
     cursor: pointer;
     span {
-        margin-top: 3px;
+        margin-top: 5px;
         display: block;
-        width: 18px;
-        height: 2px;
+        width: 35px;
+        height: 3px;
         background-color: #fff;
     }
     span.long {
         display: block;
-        width: 21px;
-        height: 2px;
+        width: 30px;
+        height: 3px;
         background-color: #fff;
     }
-    // &__hamburger::before {
-    //     content: "";
-    //     display: block;
-    //     width: 20px;
-    //     height: 2px;
-    //     background-color: #fff;
-    //     position: absolute;
-    //     top: 5px;
-    // }
-    // &__hamburger::after {
-    //     content: "";
-    //     display: block;
-    //     width: 20px;
-    //     height: 2px;
-    //     background-color: #fff;
-    //     position: absolute;
-    //     bottom: 2px;
-    //     :hover {
-    //         cursor: pointer;
-    //     }
-    // }
+
 }
