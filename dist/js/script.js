@@ -1,3 +1,5 @@
+//                              Гамбургер
+
 let hamburger = document.querySelector('.hamburger')
 let menu  = document.querySelector('.menu')
 let closer  = document.querySelector('.menu__close ')
@@ -8,18 +10,16 @@ hamburger.addEventListener('click', () => {
 closer.addEventListener("click", () => {
     menu.classList.remove("active")
 })
-// ____________________ счетчик процентов/ метрика скиллов ____________________
+//                              счетчик процентов/ метрика скиллов
+
 let scoreSkill = document.querySelectorAll(".skills__metric_procent"),
     lines = document.querySelectorAll(".skills__metric-line span")
-// let procent = scoreSkill.innerText
 scoreSkill.forEach((item,i)=>{
     lines[i].style.width = item.innerHTML
 })
 
-// _________ плавный скролл чистый js
-window.scrollTo( 0, 1000 );
 
-// этот код меняет поведение прокрутки на "smooth"
+//                              Плавный скролл
 function scrollTo(element) {
     window.scroll({
       left: 0, 
@@ -27,17 +27,35 @@ function scrollTo(element) {
       behavior: 'smooth'
     })
   }
-  
-  var button = document.querySelector('.button');
-  var footer = document.querySelector('#footer');
-  
-  button.addEventListener('click', () => {
-    scrollTo(footer);
+
+  let triggers = document.querySelectorAll('.menu__link')
+  triggers.forEach((item) => {
+      item.addEventListener('click',() => {
+      let scrollPage = document.querySelector(item.getAttribute("data"))
+      window.scrollTo(scrollPage)
+      console.log(scrollPage.offsetParent);
+    })
   })
 
 
+  //                        скрытие sidepanel
 
+  let element = document.querySelector('#resume')
+  console.log(element);
+  let sidepanel = document.querySelector('.sidepanel')
+  console.log(sidepanel);
 
+  window.addEventListener("scroll", function(){
+    let Y1 = window.scrollY
+    let Y = window.pageYOffset
+    let h = document.documentElement.clientHeight
+    if (Y > '713') {
+      sidepanel.style.display = 'none'
+    }
+    if (Y < '713' && document.documentElement.clientWidth > '1439') {
+      sidepanel.style.display = 'flex'
+    }
+})
 
 
 // ________________________ scroll intersection api
