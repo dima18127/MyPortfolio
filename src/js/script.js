@@ -1,7 +1,7 @@
 //                              Гамбургер
 
 let hamburger = document.querySelector('.hamburger')
-let menu  = document.querySelector('.menu')
+let menu  = document.querySelector('.menu__block')
 let closer  = document.querySelector('.menu__close ')
 
 hamburger.addEventListener('click', () => {
