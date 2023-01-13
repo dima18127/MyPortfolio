@@ -3,12 +3,15 @@
 let hamburger = document.querySelector('.hamburger')
 let menu  = document.querySelector('.menu__block')
 let closer  = document.querySelector('.menu__close ')
+    menuOverlay = document.querySelector('.menu__overlay')
 
 hamburger.addEventListener('click', () => {
     menu.classList.toggle("active")
+    menuOverlay.classList.toggle("active")
 })
 closer.addEventListener("click", () => {
     menu.classList.remove("active")
+    menuOverlay.classList.remove("active")
 })
 //                              счетчик процентов/ метрика скиллов
 
@@ -17,6 +20,8 @@ let scoreSkill = document.querySelectorAll(".skills__metric_procent"),
 scoreSkill.forEach((item,i)=>{
     lines[i].style.width = item.innerHTML
 })
+//
+
 
 
 //                              Плавный скролл
