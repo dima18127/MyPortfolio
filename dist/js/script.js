@@ -13,6 +13,10 @@ closer.addEventListener("click", () => {
     menu.classList.remove("active")
     menuOverlay.classList.remove("active")
 })
+menuOverlay.addEventListener('click', ()=> {
+  menu.classList.toggle("active")
+  menuOverlay.classList.toggle("active")
+})
 //                              счетчик процентов/ метрика скиллов
 
 let scoreSkill = document.querySelectorAll(".skills__metric_procent"),
@@ -54,10 +58,10 @@ function scrollTo(element) {
     let Y1 = window.scrollY
     let Y = window.pageYOffset
     let h = document.documentElement.clientHeight
-    if (Y > '713') {
+    if (Y > '713' || document.documentElement.clientWidth < '1439px') {
       sidepanel.style.display = 'none'
     }
-    if (Y < '713' && document.documentElement.clientWidth > '1439') {
+    if (Y < '713' && document.documentElement.clientWidth > '1439px') {
       sidepanel.style.display = 'flex'
     }
 })
