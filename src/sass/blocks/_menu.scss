@@ -3,15 +3,18 @@
     top: 0px;
     left: 0px;
     height: 50px;
-    background: $main-color;
+    background: var(--main-color);
     width: 100%;
     transition: all 0.9s;
     z-index: 10;
-    .wrapper {
+    &__wrapper {
         width: 100%;
-        height: 100px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
     }
     &_social {
+        display: none;
         a {
             text-decoration: none;
             color: #fff;
@@ -19,6 +22,7 @@
     }
 
     &_contacts {
+        display: block;
         font-weight: 700;
         font-size: 15px;
         display: flex;
@@ -36,7 +40,6 @@
         font-size: 15.5px;
         text-decoration: none;
         transition: all 0.4s;
-
         .divider {
             width: 50px;
             transition: all 0.8s;
@@ -129,6 +132,7 @@
             display: block;
             transition: all 1s;
         }
+
         // &::before {
         //     content: "";
         //     width: 15px;
@@ -146,7 +150,31 @@
         //     }
         // }
     }
+    &__svg {
+        display: block;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+    &__sun {
+        display: block;
+    }
+    &__moon {
+        padding: 10px 10px;
+        display: none;
+        width: 50px;
+        height: 50px;
+    }
 
+    &__sun.active {
+        display: none;
+        padding-top: 10px;
+    }
+
+    &__moon.active {
+        display: block;
+        // padding-top: 10px;
+    }
     // &__overlay {
     //     position: fixed;
     //     top: 0;

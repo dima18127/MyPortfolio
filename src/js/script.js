@@ -1,9 +1,15 @@
 //                              Гамбургер
 
-let hamburger = document.querySelector('.hamburger')
-let menu  = document.querySelector('.menu__block')
-let closer  = document.querySelector('.menu__close ')
-    menuOverlay = document.querySelector('.menu__overlay')
+let hamburger = document.querySelector('.hamburger'),
+    menu  = document.querySelector('.menu__block'),
+    closer  = document.querySelector('.menu__close '),
+    menuOverlay = document.querySelector('.menu__overlay'),
+    sun = document.querySelector('.menu__sun'),
+    moon = document.querySelector('.menu__moon'),
+    svg = document.querySelectorAll('.menu__svg'),
+    root = document.querySelector(':root'),
+    rootStyles = getComputedStyle(root);
+     
 
 hamburger.addEventListener('click', () => {
     menu.classList.toggle("active")
@@ -17,6 +23,38 @@ menuOverlay.addEventListener('click', ()=> {
   menu.classList.toggle("active")
   menuOverlay.classList.toggle("active")
 })
+svg.forEach( (item)=>{
+  item.addEventListener('click', () => {
+    if (item === sun) {
+      console.log(item);
+      moon.classList.toggle('active');
+      sun.classList.toggle('active');
+      root.style.setProperty('--main-color', '#043c4d');
+      root.style.setProperty('--bg-color', '#043c4d');
+      root.style.setProperty('--text-color', '#fff');
+    }
+    if ( item === moon) {
+      console.log(item);
+      moon.classList.toggle('active');
+      sun.classList.toggle('active');
+      root.style.setProperty('--main-color', '#3e8d80');
+      root.style.setProperty('--bg-color', '#fff');
+      root.style.setProperty('--text-color', '#000');
+
+
+    }
+
+})
+})
+// sun.addEventListener('click', ()=> {
+  // moon.classList.toggle('active')
+  // sun.classList.toggle('active')
+  
+// })
+
+
+
+
 //                              счетчик процентов/ метрика скиллов
 
 let scoreSkill = document.querySelectorAll(".skills__metric_procent"),

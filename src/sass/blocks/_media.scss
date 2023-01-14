@@ -283,12 +283,31 @@
         &_social {
             position: absolute;
             bottom: 5%;
+            left: 50%;
             transform: translateX(-50%);
-            width: 90px;
+            width: 130px;
             display: flex;
             justify-content: space-between;
             font-family: "Poppins";
             z-index: 12;
+        }
+        &_contacts {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+
+            span {
+                margin-right: 8px;
+                text-decoration: none;
+            }
         }
         &__link {
             margin-top: 40px;
