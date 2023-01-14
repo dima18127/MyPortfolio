@@ -23,37 +23,56 @@ menuOverlay.addEventListener('click', ()=> {
   menu.classList.toggle("active")
   menuOverlay.classList.toggle("active")
 })
+//               тема ночь
+
+    let date = new Date(); // Получаем текущие дату и время
+    console.log(date);
+    let h = date.getHours(); // Получаем текущий час
+    console.log(h);
+    if (h < 8 || h > 18) {
+      console.log(h);
+      switchNight()
+    }
+function switchDay(params) {
+  moon.classList.toggle('active');
+  sun.classList.toggle('active');
+  root.style.setProperty('--main-color', '#3e8d80');
+  root.style.setProperty('--bg-color', '#fff');
+  root.style.setProperty('--text-color', '#000');
+  root.style.setProperty('--second-color', '#3e8d80');
+}
+function switchNight(params) {
+  moon.classList.toggle('active');
+  sun.classList.toggle('active');
+  root.style.setProperty('--main-color', '#043c4d');
+  root.style.setProperty('--bg-color', '#043c4d');
+  root.style.setProperty('--text-color', '#fff');
+  root.style.setProperty('--second-color', '#336b7c');
+}
+//               день/ночь по клику
 svg.forEach( (item)=>{
   item.addEventListener('click', () => {
     if (item === sun) {
-      console.log(item);
-      moon.classList.toggle('active');
-      sun.classList.toggle('active');
-      root.style.setProperty('--main-color', '#043c4d');
-      root.style.setProperty('--bg-color', '#043c4d');
-      root.style.setProperty('--text-color', '#fff');
+      switchNight();
     }
     if ( item === moon) {
-      console.log(item);
-      moon.classList.toggle('active');
-      sun.classList.toggle('active');
-      root.style.setProperty('--main-color', '#3e8d80');
-      root.style.setProperty('--bg-color', '#fff');
-      root.style.setProperty('--text-color', '#000');
-
-
+      switchDay();
     }
-
+  })
 })
+//                                 порфолио в разработке
+let portfolioItem = document.querySelectorAll(".portfolio__item")
+
+portfolioItem.forEach((item)=>{
+  console.log(item);
+  // item.addEventListener('click',()=> {
+  //   console.log("yes")})
+  if (item.classList.contains('dev')) {
+    item.addEventListener('click',()=> {
+      console.log("yes");
+    })
+  }
 })
-// sun.addEventListener('click', ()=> {
-  // moon.classList.toggle('active')
-  // sun.classList.toggle('active')
-  
-// })
-
-
-
 
 //                              счетчик процентов/ метрика скиллов
 
@@ -64,8 +83,6 @@ scoreSkill.forEach((item,i)=>{
 })
 //
 
-
-
 //                              Плавный скролл
 function scrollTo(element) {
     window.scroll({
@@ -75,7 +92,22 @@ function scrollTo(element) {
     })
   }
 
-  let triggers = document.querySelectorAll('.menu__link')
+  let triggers = document.querySelectorAll('.menu__link'),
+      trigPortfolio = document.querySelector('#btn-portfolio'),
+      trigAbout = document.querySelector('#link-about')
+console.log(trigAbout);
+  trigPortfolio.addEventListener('click',() => {
+        let scrollPage = document.querySelector("#portfolio")
+        window.scrollTo(scrollPage)
+        console.log(scrollPage.offsetParent);
+      })
+      trigAbout.addEventListener('click',() => {
+    let scrollPage = document.querySelector("#about")
+    window.scrollTo(scrollPage)
+    console.log(scrollPage.offsetParent);
+  })
+      
+    
   triggers.forEach((item) => {
       item.addEventListener('click',() => {
       let scrollPage = document.querySelector(item.getAttribute("data"))
@@ -95,13 +127,19 @@ function scrollTo(element) {
   window.addEventListener("scroll", function(){
     let Y1 = window.scrollY
     let Y = window.pageYOffset
-    let h = document.documentElement.clientHeight
-    if (Y > '713' || document.documentElement.clientWidth < '1439px') {
+    let w = document.documentElement.clientWidth
+
+
+    if (Y > '713' || w < '1439') {
+      console.log(Y);
       sidepanel.style.display = 'none'
+      console.log(w);
     }
-    if (Y < '713' && document.documentElement.clientWidth > '1439px') {
+    else if (Y < '712' && w > '1439') {
+      console.log(Y);
+      console.log(w);
       sidepanel.style.display = 'flex'
-    }
+    };
 })
 
 
