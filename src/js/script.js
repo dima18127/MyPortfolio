@@ -36,10 +36,14 @@ menuOverlay.addEventListener('click', ()=> {
 function switchDay(params) {
   moon.classList.toggle('active');
   sun.classList.toggle('active');
-  root.style.setProperty('--main-color', '#3e8d80');
-  root.style.setProperty('--bg-color', '#fff');
-  root.style.setProperty('--text-color', '#000');
-  root.style.setProperty('--second-color', '#3e8d80');
+  const setVariables = vars => Object.entries(vars).forEach(v => root.style.setProperty(v[0], v[1]));
+  const myVariables = {
+    '--main-color': '#3e8d80',
+    '--bg-color': '#fff',
+    '--text-color': '#000',
+    '--second-color': '#3e8d80',
+  };
+  setVariables(myVariables);
 }
 function switchNight(params) {
   moon.classList.toggle('active');
