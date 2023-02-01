@@ -551,4 +551,22 @@
             line-height: 11px;
         }
     }
+    @media (max-width: 388px) {
+        .menu {
+            // &__contacts {
+            //     svg {
+            //         display: none;
+            //     }
+            // }
+            &__moon.active {
+                display: none;
+            }
+            &__sun {
+                display: none;
+            }
+            &_divider {
+                display: none;
+            }
+        }
+    }
 }
