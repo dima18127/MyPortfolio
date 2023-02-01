@@ -114,8 +114,6 @@
 }
 @media (max-width: 992px) {
     .menu {
-        height: 40px;
-
         font-size: 10px;
         &__link {
             font-size: 11px;
@@ -126,12 +124,15 @@
                 font-size: 12px;
             }
         }
+        &__contacts {
+            font-size: 14px;
+        }
     }
     .about {
         padding-top: 30px;
     }
     .container {
-        max-width: 720px;
+        max-width: 769px;
     }
     .title {
         &_fz36 {
@@ -216,6 +217,8 @@
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        top: 11px;
+        right: 25px;
     }
     .container {
         max-width: 100%;
@@ -225,25 +228,25 @@
     }
     .menu {
         position: fixed;
-        background: $main-color;
-        height: 60px;
+        background: var(--main-color);
+        height: 50px;
         width: 100%;
         transition: all 0.9s;
         z-index: 10;
         &__block {
             margin-left: -10px;
-            background: $main-color;
+            background: var(--main-color);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             padding-left: 15px;
             padding-top: 110px;
-            position: relative;
             z-index: 11;
             width: 250px;
             height: 100vh;
 
+            position: absolute;
             visibility: hidden;
             opacity: 0;
             left: -100%;
@@ -256,7 +259,7 @@
                 position: fixed;
                 top: 0;
                 left: 0;
-                background: $main-color;
+                background: var(--main-color);
                 transition: all 0.9s;
             }
         }
@@ -291,11 +294,11 @@
             font-family: "Poppins";
             z-index: 12;
         }
-        &_contacts {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
+        &__contacts {
+            display: flex;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
             font-weight: 700;
             font-size: 15px;
             display: flex;
@@ -308,6 +311,14 @@
                 margin-right: 8px;
                 text-decoration: none;
             }
+            svg {
+                margin-left: 10px;
+            }
+        }
+        &__svg {
+            position: fixed;
+            top: 0px;
+            right: 80px;
         }
         &__link {
             margin-top: 40px;

@@ -26,6 +26,10 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+a:visited {
+    color: rgb(255, 255, 255);
+}
 .divider {
     height: 3px;
     width: 60px;
